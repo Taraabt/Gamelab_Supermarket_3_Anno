@@ -61,25 +61,13 @@ void AGamelabSupermarketCharacter::Move(const FInputActionValue& Value)
 	DoMove(MovementVector.X, MovementVector.Y);
 }
 
-
-
 void AGamelabSupermarketCharacter::DoMove(float Right, float Forward)
 {
-	if (GetController() != nullptr)
+	if (Controller != nullptr)
 	{
-		// find out which way is forward
-		const FRotator Rotation = GetController()->GetControlRotation();
-		const FRotator YawRotation(0, Rotation.Yaw, 0);
 
-		// get forward vector
-		const FVector ForwardDirection = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::X);
-
-		// get right vector 
-		const FVector RightDirection = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::Y);
-
-		// add movement 
-		AddMovementInput(ForwardDirection, Forward);
-		AddMovementInput(RightDirection, Right);
+		AddMovementInput(FVector::ForwardVector, Forward);
+		AddMovementInput(FVector::RightVector, Right);
 	}
 }
 
@@ -93,6 +81,7 @@ void AGamelabSupermarketCharacter::DoJumpStart()
 
 void AGamelabSupermarketCharacter::DoJumpEnd()
 {
-	// signal the character to stop jumping
 	StopJumping();
 }
+
+
