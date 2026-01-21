@@ -18,10 +18,7 @@ void ASlot::BeginPlay()
 	
 }
 
-void ASlot::Interact()
-{
 
-}
 
 // Called every frame
 void ASlot::Tick(float DeltaTime)
