@@ -3,11 +3,12 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Interactable.h"
 #include "GameFramework/Actor.h"
 #include "WareHouse.generated.h"
 
 UCLASS()
-class GAMELABSUPERMARKET_API AWareHouse : public AActor
+class GAMELABSUPERMARKET_API AWareHouse : public AActor, public IInteractable
 {
 	GENERATED_BODY()
 	
@@ -22,5 +23,6 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-
+	UFUNCTION(BlueprintImplementableEvent)
+	void Interact();
 };

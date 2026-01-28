@@ -25,7 +25,8 @@ public:
 	void Move(const FInputActionValue& Value);
 	void Look(const FInputActionValue& Value);
 
-	TArray<AProduct> Box;
+	UPROPERTY(BlueprintReadWrite)
+	TArray<AProduct*> Box;
 
 
 };
