@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Interactable.h"
+#include "Product.h"
 #include "GameFramework/Actor.h"
 #include "WareHouse.generated.h"
 
@@ -23,6 +24,10 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-	UFUNCTION(BlueprintImplementableEvent)
-	void Interact();
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable)
+	void Interact(ACharacter* Interactor);
+
+	UPROPERTY(BlueprintReadWrite)
+	TArray<AProduct*> Box;
+
 };

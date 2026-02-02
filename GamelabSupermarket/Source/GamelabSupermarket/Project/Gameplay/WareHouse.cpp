@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "Project/Gameplay/WareHouse.h"
+#include "WareHouse.h"
 
 // Sets default values
 AWareHouse::AWareHouse()

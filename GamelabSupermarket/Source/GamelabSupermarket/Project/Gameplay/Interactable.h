@@ -15,6 +15,6 @@ class IInteractable
 	GENERATED_BODY()
 
 public:
-	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable)
-	void Interact();
+	UFUNCTION(BlueprintImplementableEvent,BlueprintCallable)
+	void Interact(ACharacter* Interactor);
 };

@@ -22,7 +22,7 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-	UFUNCTION(BlueprintImplementableEvent)
-	void Interact();
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable)
+	void Interact(ACharacter* Interactor);
 
 };
