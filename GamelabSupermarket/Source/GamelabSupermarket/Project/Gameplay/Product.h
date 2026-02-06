@@ -15,6 +15,7 @@ public:
 
 	AProduct();
 	virtual void Tick(float DeltaTime) override;
+	UPROPERTY(BlueprintReadWrite)
 	FString name;
 
 
