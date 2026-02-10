@@ -26,14 +26,10 @@ protected:
 	UInputAction* MoveAction;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input")
-	UInputAction* LookAction;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input")
 	UInputAction* JumpAction;
 
 	/* ===== INPUT HANDLERS ===== */
 	void HandleMove(const FInputActionValue& Value);
-	void HandleLook(const FInputActionValue& Value);
 	void HandleJump();
 	void HandleStopJump();
 

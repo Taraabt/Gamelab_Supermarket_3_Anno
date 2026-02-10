@@ -23,10 +23,7 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	void Move(const FInputActionValue& Value);
-	void Look(const FInputActionValue& Value);
 
-	UPROPERTY(BlueprintReadWrite)
-	TArray<AProduct*> Box;
 
 
 };

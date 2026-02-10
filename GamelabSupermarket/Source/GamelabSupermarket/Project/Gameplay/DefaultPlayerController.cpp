@@ -33,7 +33,6 @@ void ADefaultPlayerController::SetupInputComponent()
 	if (!EnhancedInput) return;
 
 	EnhancedInput->BindAction(MoveAction, ETriggerEvent::Triggered, this, &ADefaultPlayerController::HandleMove);
-	EnhancedInput->BindAction(LookAction, ETriggerEvent::Triggered, this, &ADefaultPlayerController::HandleLook);
 
 	EnhancedInput->BindAction(JumpAction, ETriggerEvent::Started, this, &ADefaultPlayerController::HandleJump);
 	EnhancedInput->BindAction(JumpAction, ETriggerEvent::Completed, this, &ADefaultPlayerController::HandleStopJump);
@@ -47,13 +46,6 @@ void ADefaultPlayerController::HandleMove(const FInputActionValue& Value)
 	}
 }
 
-void ADefaultPlayerController::HandleLook(const FInputActionValue& Value)
-{
-	if (ADefaultCharacter* MyCharacter = Cast<ADefaultCharacter>(GetPawn()))
-	{
-		MyCharacter->Look(Value);
-	}
-}
 
 void ADefaultPlayerController::HandleJump()
 {
