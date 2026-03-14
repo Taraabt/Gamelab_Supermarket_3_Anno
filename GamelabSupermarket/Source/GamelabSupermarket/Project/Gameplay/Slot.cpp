@@ -1,29 +1,37 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
-
 #include "Project/Gameplay/Slot.h"
 
-// Sets default values
 ASlot::ASlot()
 {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
 }
 
-// Called when the game starts or when spawned
 void ASlot::BeginPlay()
 {
 	Super::BeginPlay();
-	
 }
 
-
-
-// Called every frame
 void ASlot::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
 }
 
+// ===== ADD TAG =====
+
+void ASlot::AddSlotTag(FGameplayTag Tag)
+{
+	GameplayTags.AddTag(Tag);
+}
+
+// ===== REMOVE TAG =====
+
+void ASlot::RemoveSlotTag(FGameplayTag Tag)
+{
+	GameplayTags.RemoveTag(Tag);
+}
+
+// ===== EQS INTERFACE =====
+
+void ASlot::GetOwnedGameplayTags(FGameplayTagContainer& TagContainer) const
+{
+	TagContainer = GameplayTags;
+}
