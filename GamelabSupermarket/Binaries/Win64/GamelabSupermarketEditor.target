@@ -4298,6 +4298,34 @@
 			"Type": "RequiredResource"
 		},
 		{
+			"Path": "$(EngineDir)/Plugins/Marketplace/FabLauncher/Binaries/Win64/UnrealEditor-FabLauncher.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Marketplace/FabLauncher/Binaries/Win64/UnrealEditor-FabLauncher.pdb",
+			"Type": "SymbolFile"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Marketplace/FabLauncher/Binaries/Win64/UnrealEditor-FabLauncherQuixelDependencies.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Marketplace/FabLauncher/Binaries/Win64/UnrealEditor-FabLauncherQuixelDependencies.pdb",
+			"Type": "SymbolFile"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Marketplace/FabLauncher/Binaries/Win64/UnrealEditor-FabSharedInterchangeHandler.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Marketplace/FabLauncher/Binaries/Win64/UnrealEditor-FabSharedInterchangeHandler.pdb",
+			"Type": "SymbolFile"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Marketplace/FabLauncher/Binaries/Win64/UnrealEditor.modules",
+			"Type": "RequiredResource"
+		},
+		{
 			"Path": "$(EngineDir)/Plugins/Marketplace/Substanc62d2b1b7d197V27/Binaries/Win64/UnrealEditor-SubstanceConnector.dll",
 			"Type": "DynamicLibrary"
 		},
@@ -30416,6 +30444,10 @@
 			"Type": "UFS"
 		},
 		{
+			"Path": "$(EngineDir)/Plugins/Marketplace/FabLauncher/FabLauncher.uplugin",
+			"Type": "UFS"
+		},
+		{
 			"Path": "$(EngineDir)/Plugins/Marketplace/Substanc62d2b1b7d197V27/Substance.uplugin",
 			"Type": "UFS"
 		},
@@ -30826,6 +30858,7 @@
 		"EnvironmentQueryEditor",
 		"ExampleDeviceProfileSelector",
 		"Fab",
+		"FabLauncher",
 		"FacialAnimation",
 		"FastBuildController",
 		"Fracture",
