@@ -4326,34 +4326,6 @@
 			"Type": "RequiredResource"
 		},
 		{
-			"Path": "$(EngineDir)/Plugins/Marketplace/Substanc62d2b1b7d197V27/Binaries/Win64/UnrealEditor-SubstanceConnector.dll",
-			"Type": "DynamicLibrary"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Marketplace/Substanc62d2b1b7d197V27/Binaries/Win64/UnrealEditor-SubstanceConnector.pdb",
-			"Type": "SymbolFile"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Marketplace/Substanc62d2b1b7d197V27/Binaries/Win64/UnrealEditor-SubstanceCore.dll",
-			"Type": "DynamicLibrary"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Marketplace/Substanc62d2b1b7d197V27/Binaries/Win64/UnrealEditor-SubstanceCore.pdb",
-			"Type": "SymbolFile"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Marketplace/Substanc62d2b1b7d197V27/Binaries/Win64/UnrealEditor-SubstanceEditor.dll",
-			"Type": "DynamicLibrary"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Marketplace/Substanc62d2b1b7d197V27/Binaries/Win64/UnrealEditor-SubstanceEditor.pdb",
-			"Type": "SymbolFile"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Marketplace/Substanc62d2b1b7d197V27/Binaries/Win64/UnrealEditor.modules",
-			"Type": "RequiredResource"
-		},
-		{
 			"Path": "$(EngineDir)/Plugins/MassInsights/Binaries/Win64/UnrealEditor-MassInsightsAnalysis.dll",
 			"Type": "DynamicLibrary"
 		},
@@ -30448,10 +30420,6 @@
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Plugins/Marketplace/Substanc62d2b1b7d197V27/Substance.uplugin",
-			"Type": "UFS"
-		},
-		{
 			"Path": "$(EngineDir)/Plugins/MassInsights/MassInsights.uplugin",
 			"Type": "UFS"
 		},
@@ -30963,7 +30931,6 @@
 		"SpeedTreeImporter",
 		"StateTree",
 		"StylusInput",
-		"Substance",
 		"SubversionSourceControl",
 		"Synthesis",
 		"Takes",
