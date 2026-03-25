@@ -33,9 +33,6 @@ void ADefaultPlayerController::SetupInputComponent()
 	if (!EnhancedInput) return;
 
 	EnhancedInput->BindAction(MoveAction, ETriggerEvent::Triggered, this, &ADefaultPlayerController::HandleMove);
-
-	EnhancedInput->BindAction(JumpAction, ETriggerEvent::Started, this, &ADefaultPlayerController::HandleJump);
-	EnhancedInput->BindAction(JumpAction, ETriggerEvent::Completed, this, &ADefaultPlayerController::HandleStopJump);
 }
 
 void ADefaultPlayerController::HandleMove(const FInputActionValue& Value)
@@ -45,20 +42,7 @@ void ADefaultPlayerController::HandleMove(const FInputActionValue& Value)
 		MyCharacter->Move(Value);
 	}
 }
-
-
-void ADefaultPlayerController::HandleJump()
+void ADefaultCharacter::Tick(float DeltaTime)
 {
-	if (ACharacter* MyCharacter = Cast<ACharacter>(GetPawn()))
-	{
-		MyCharacter->Jump();
-	}
-}
-
-void ADefaultPlayerController::HandleStopJump()
-{
-	if (ACharacter* MyCharacter = Cast<ACharacter>(GetPawn()))
-	{
-		MyCharacter->StopJumping();
-	}
+	Super::Tick(DeltaTime);
 }

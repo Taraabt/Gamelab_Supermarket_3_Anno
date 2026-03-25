@@ -5,7 +5,6 @@
 
 ADefaultCharacter::ADefaultCharacter()
 {
-
 	PrimaryActorTick.bCanEverTick = true;
 }
 
@@ -13,16 +12,6 @@ void ADefaultCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 }
-
-//void ADefaultCharacter::Move(const FInputActionValue& Value)
-//{
-//	const FVector2D Movementvector = Value.Get<FVector2D>();
-//	const FVector Forward = GetActorForwardVector();
-//	AddMovementInput(Forward, Movementvector.Y);
-//	const FVector Right = GetActorRightVector();
-//	AddMovementInput(Right, Movementvector.X);
-//
-//}
 
 void ADefaultCharacter::Move(const FInputActionValue& Value)
 {
@@ -52,11 +41,5 @@ void ADefaultCharacter::Move(const FInputActionValue& Value)
     }
 }
 
-
-
-void ADefaultCharacter::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
-}
 
 
