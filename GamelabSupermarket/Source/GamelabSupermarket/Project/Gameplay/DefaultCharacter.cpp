@@ -15,23 +15,34 @@ void ADefaultCharacter::BeginPlay()
 
 void ADefaultCharacter::Move(const FInputActionValue& Value)
 {
-	const FVector2D Movementvector = Value.Get<FVector2D>();
-	const FVector Forward = GetActorForwardVector();
-	AddMovementInput(Forward, Movementvector.Y);
-	const FVector Right = GetActorRightVector();
-	AddMovementInput(Right, Movementvector.X);
+
+    const FVector2D MovementVector = Value.Get<FVector2D>();
+
+    if (!bIsStunned) {
+        if (!Controller) return;
+
+        // Direzioni rispetto alla camera/controller
+        const FRotator ControlRotation = Controller->GetControlRotation();
+        const FRotator YawRotation(0.f, ControlRotation.Yaw, 0.f);
+
+        const FVector Forward = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::X);
+        const FVector Right = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::Y);
+
+        FVector MoveDirection = (Forward * MovementVector.Y) + (Right * MovementVector.X);
+
+        if (!MoveDirection.IsNearlyZero())
+        {
+            AddMovementInput(MoveDirection);
+
+            // Ruota il personaggio verso la direzione di movimento
+            FRotator NewRotation = MoveDirection.Rotation();
+            NewRotation.Pitch = 0.f;
+            NewRotation.Roll = 0.f;
+
+            SetActorRotation(NewRotation);
+        }
+    }
 }
 
-void ADefaultCharacter::Look(const FInputActionValue& Value)
-{
-	const FVector2D LookAxisVector = Value.Get<FVector2D>();
-	AddControllerYawInput(LookAxisVector.X);
-	AddControllerPitchInput(LookAxisVector.Y);
-}
-
-void ADefaultCharacter::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
-}
 
 

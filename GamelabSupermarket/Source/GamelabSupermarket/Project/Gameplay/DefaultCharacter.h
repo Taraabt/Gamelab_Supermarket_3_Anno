@@ -18,15 +18,13 @@ class GAMELABSUPERMARKET_API ADefaultCharacter : public ACharacter
 public:
 	ADefaultCharacter();
 
-
+	UPROPERTY(BlueprintReadWrite)
+	bool bIsStunned;
 	virtual void BeginPlay() override;
 	virtual void Tick(float DeltaTime) override;
 
 	void Move(const FInputActionValue& Value);
-	void Look(const FInputActionValue& Value);
 
-	UPROPERTY(BlueprintReadWrite)
-	TArray<AProduct*> Box;
 
 
 };
