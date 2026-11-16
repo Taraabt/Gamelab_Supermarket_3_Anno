@@ -25,20 +25,7 @@ public class GamelabSupermarket : ModuleRules
 		PrivateDependencyModuleNames.AddRange(new string[] { });
 
 		PublicIncludePaths.AddRange(new string[] {
-			"GamelabSupermarket",
-			"GamelabSupermarket/Variant_Platforming",
-			"GamelabSupermarket/Variant_Platforming/Animation",
-			"GamelabSupermarket/Variant_Combat",
-			"GamelabSupermarket/Variant_Combat/AI",
-			"GamelabSupermarket/Variant_Combat/Animation",
-			"GamelabSupermarket/Variant_Combat/Gameplay",
-			"GamelabSupermarket/Variant_Combat/Interfaces",
-			"GamelabSupermarket/Variant_Combat/UI",
-			"GamelabSupermarket/Variant_SideScrolling",
-			"GamelabSupermarket/Variant_SideScrolling/AI",
-			"GamelabSupermarket/Variant_SideScrolling/Gameplay",
-			"GamelabSupermarket/Variant_SideScrolling/Interfaces",
-			"GamelabSupermarket/Variant_SideScrolling/UI"
+			"GamelabSupermarket"
 		});
 
 		// Uncomment if you are using Slate UI
